@@ -97,7 +97,7 @@ const Profile = () => {
       setModal({ ...modal, title: "Update Profile" });
     }
   }, [openCrop]);
-
+  console.log("currentUser viwe", currentUser)
   return !openCrop ? (
     <form onSubmit={handleSubmit}>
       <DialogContent dividers>

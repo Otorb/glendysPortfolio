@@ -42,9 +42,32 @@ const SubBox = styled.div`
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 100%;
+    width: 130%;
     height: auto;
   }
+  @media screen and (max-width: 1000px) {
+    .pic{
+      width: 200%;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .pic{
+      width: 230%;
+      height: 80%;
+    }
+  }
+
+
+  @media screen and (max-width: 400px) {
+    .pic{
+      width: 200%;
+      height: 65%;
+      padding-bottom: 6rem;
+    }
+  }
+
+
 `;
 
 const Text = styled.div`
@@ -74,7 +97,7 @@ const Intro = () => {
       <SubBox>
         <Text>
           <h1>¡Hola! Soy</h1>
-          <h3>GLendys Bolívar</h3>
+          <h3>Glendys Bolívar</h3>
           <h6>Diseñadora, Fotógrafa</h6>
         </Text>
       </SubBox>

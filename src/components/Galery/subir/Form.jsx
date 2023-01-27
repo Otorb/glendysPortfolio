@@ -25,8 +25,9 @@ function Form({ setFiles }) {
   return (
     <form>
 
-   {/* {currentUser.email   === "glendys.bolivar14@gmail.com" ? */}
-   {currentUser ? <div>
+   {currentUser.email   === "glendys.bolivar14@gmail.com" ?
+   /* {currentUser ?  */
+    <div>
     <Input
     type="file"
     inputProps={{ multiple: true }}
