@@ -191,7 +191,7 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Diseños
+                    Fotos
                 </motion.h2>
             </WORK>
             <BottomBar>
