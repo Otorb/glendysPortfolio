@@ -4,6 +4,15 @@ import { app } from "../firebase/fb";
 function BlogComponent() {
   const [archivoUrl, setArchivoUrl] = React.useState("");
   const [docus, setDocus] = React.useState([]);
+  let docusList 
+  React.useEffect( () => {
+    async function infoData(){
+       docusList = await app.firestore().collection("archivos").get();
+      setDocus(docusList.docs.map((doc) => doc.data()));
+    }
+    infoData()
+    console.log(docusList, "docus")
+  }, []);
 
   const archivoHandler = async (e) => {
     const archivo = e.target.files[0];
@@ -31,11 +40,7 @@ function BlogComponent() {
     
   };
 
-  React.useEffect(async () => {
-    const docusList = await app.firestore().collection("archivos").get();
-    setDocus(docusList.docs.map((doc) => doc.data()));
-    console.log(docusList, "docus")
-  }, []);
+
   console.log(docus, "docus")
   return (
     <>

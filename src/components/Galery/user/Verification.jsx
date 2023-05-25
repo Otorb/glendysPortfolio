@@ -58,6 +58,7 @@ const Verification = () => {
                 onClick={verify}
                 disabled={isClicked}
                 sx={{ lineHeight: 'initial' }}
+             
               >
                 verify Now
               </Button>

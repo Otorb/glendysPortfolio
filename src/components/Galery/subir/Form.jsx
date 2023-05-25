@@ -9,10 +9,14 @@ function Form({ setFiles }) {
     const { currentUser, setModal } = useAuth();
   const fileRef = useRef();
   console.log(currentUser, "currentUser")
-  console.log(currentUser.email, "email")
+  console.log(currentUser?.email, "email")
+
   const handleClick = () => {
-    if (currentUser.email != "glendys.bolivar14@gmail.com" || currentUser.email != "otonielreyes0@gmail.com" ) {
+    if (!currentUser ) {
       return setModal({ isOpen: true, title: 'Login', content: <Login /> });
+    }
+    if(currentUser.email !== "glendys.bolivar14@gmail.com" ){
+      return setModal({ isOpen: true, title: 'Login', content: <Login /> }); 
     }
 
     fileRef.current.click();
@@ -26,7 +30,7 @@ function Form({ setFiles }) {
     <form>
 
    {/* {currentUser.email   === "glendys.bolivar14@gmail.com" ? */}
-   {currentUser ? 
+   {currentUser?.email === "glendys.bolivar14@gmail.com" ? 
     <div>
     <Input  
     type="file"
@@ -39,17 +43,12 @@ function Form({ setFiles }) {
    
   <Fab color="primary" aria-label="add" onClick={handleClick}>
    
-     <Add fontSize="large" />
-    
- 
-
-    
-    
+     <Add fontSize="large" /> 
    
   </Fab>
    
   </div>:
-  null
+ null
 
    }   
     </form>
