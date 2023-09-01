@@ -15,12 +15,14 @@ const Box = styled(motion.div)`
 
   background: linear-gradient(
         to right,
+        
         ${(props) => props.theme.body} 50%,
         ${(props) => props.theme.text} 50%
       )
       bottom,
     linear-gradient(
         to right,
+       
         ${(props) => props.theme.body} 50%,
         ${(props) => props.theme.text} 50%
       )
@@ -36,6 +38,7 @@ const SubBox = styled.div`
   width: 50%;
   position: relative;
   display: flex;
+  
 
   .pic {
     position: absolute;
@@ -60,10 +63,14 @@ const SubBox = styled.div`
 
 
   @media screen and (max-width: 400px) {
+    width: 20%;
+  
+
     .pic{
-      width: 200%;
-      height: 65%;
-      padding-bottom: 6rem;
+      width: 350px;
+      height: 300px;
+      margin-left:100px;
+      margin-bottom:125px;
     }
   }
 
@@ -85,6 +92,21 @@ const Text = styled.div`
     font-size: calc(0.5rem + 1.5vw);
     font-weight: 300;
   }
+  @media screen and (max-width: 400px) {
+
+    .hello{
+      margin-left:-28px;
+      margin-top:-50px;
+    }
+    .hello2{
+      margin-left:-20px;
+    }
+    .hello3{
+      margin-left:-20px;
+      font-size:20px;
+      
+    }
+  }
 `;
 
 const Intro = () => {
@@ -96,9 +118,9 @@ const Intro = () => {
     >
       <SubBox>
         <Text>
-          <h1>¡Hola! Soy</h1>
-          <h3>Glendys Bolívar</h3>
-          <h6>Diseñadora, Fotógrafa</h6>
+          <h1 className="hello">¡Hola! Soy</h1>
+          <h3 className="hello2">Glendys Bolívar</h3>
+          <h5 className="hello3" >Diseñadora, Fotógrafa</h5>
         </Text>
       </SubBox>
       <SubBox>

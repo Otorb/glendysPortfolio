@@ -116,7 +116,7 @@ transition: all 1s ease;
 const DarkDiv = styled.div`
 position: absolute;
 top: 0;
-background-color: #000;
+background-color: rgb(210, 112, 13);
 bottom: 0;
 right: 50%;
 width: ${props => props.click ? '50%' : '0%'};
@@ -176,7 +176,7 @@ const Main = () => {
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Fotos
+             Diseños
                 </motion.h2>
             </BLOG>
             <WORK to="/work" click={+click}>
