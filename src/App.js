@@ -14,6 +14,7 @@ import { AnimatePresence } from "framer-motion";
 import SoundBar from "./subComponents/SoundBar";
 import Contact from "./components/Contact";
 import PowerButton from "./subComponents/PowerButton";
+import BlogComponent2 from "./components/BlogComponent2";
 
 function App() {
   const location = useLocation();
@@ -34,6 +35,8 @@ function App() {
             <Route exact path="/work" element={<WorkPage />} />
             <Route exact path="/skills" element={<MySkillsPage />} />
             <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/agregar" element={<BlogComponent2 />} />
+
           </Routes>
         </AnimatePresence>
       </ThemeProvider>

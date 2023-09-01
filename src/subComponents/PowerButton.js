@@ -40,9 +40,11 @@ const Power = styled.button`
 const PowerButton = () => {
   return (
     <Power>
+      
       <NavLink to="/">
         <img src={camera} width={50} height={50} style={{cursor:"pointer", borderRadius:"10%"}}/>
       </NavLink>
+     
     </Power>
   );
 };

@@ -1,0 +1,36 @@
+.gallery {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 100px;
+  width: 80%;
+}
+
+.fotopart {
+  float: left;
+  width: 30%;
+  margin-right: 10px;
+}
+.fotopart:hover {
+  transform: scale(1.5);
+  margin-left: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery {
+    border: 2px solid blue;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 100px;
+    width: 90%;
+    height: 100%;
+  }
+  .fotopart {
+    float: left;
+    width: 47%;
+    margin-right: 10px;
+  }
+  .fotopart:hover {
+    transform: scale(3);
+   
+  }
+}

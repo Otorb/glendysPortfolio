@@ -4,7 +4,7 @@ import "./Blog.css";
 import Carousel from 'better-react-carousel'
 
 
-function BlogComponent() {
+function BlogComponent2() {
   const [archivoUrl, setArchivoUrl] = React.useState("");
   const [docus, setDocus] = React.useState([]);
   let docusList;
@@ -45,11 +45,11 @@ function BlogComponent() {
   console.log(docus, "docus");
   return (
     <>
-      {/* <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler}>
         <input type="file" onChange={archivoHandler} />
         <input type="text" name="nombre" placeholder="nombra tu archivo" />
         <button>Enviar </button>
-      </form> */}
+      </form>
       <div>
         {/* <ul>
           {docus.map((doc) => (
@@ -88,4 +88,4 @@ function BlogComponent() {
   );
 }
 
-export default BlogComponent;
+export default BlogComponent2;
